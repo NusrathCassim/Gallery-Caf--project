@@ -1,0 +1,371 @@
+/* General*/
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Pangolin&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    background-color: #1A120B;
+    font-family: "Poppins", sans-serif, "Pangolin";
+    
+}
+html{
+    scroll-behavior: smooth;
+
+}
+p{
+    color: #ffffff;
+
+}
+a, .btn{
+    transition: all 300ms ease;
+}
+/*Desktop Nav*/
+
+nav, .nav-links{
+    display: flex;
+}
+nav{
+    justify-content: space-around;
+    align-items: center;
+    height: 17vh;
+}
+.nav-links{
+    gap: 2rem;
+    list-style: none;
+    font-size: 1.4rem;
+}
+
+
+a{
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    text-decoration-color: white;
+}
+
+a:hover{
+color: darkgray;
+text-decoration: underline;
+text-underline-offset: 1rem;
+text-decoration: rgb(181, 181, 181);
+}
+
+.Logo{
+    color: #ffffff;
+font-size: 2rem;
+font-weight: 500;
+}
+
+.Logo:hover{
+    cursor: default;
+}
+
+/*HamBurger Menu*/
+#hamburger-nav{
+    display: none;
+}
+.hamburger-menu{
+    position: relative;
+    display: inline-block;
+}
+
+.hamburger-icon{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 24px;
+    width: 30px;
+    cursor: pointer;
+}
+
+.hamburger-icon span{
+    width: 100%;
+    height: 2px;
+    background-color: rgb(255, 226, 199);
+    transition: all 0.3 ease-in-out;
+}
+
+.menu-links{
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background-color: white;
+    width: fit-content;
+    max-height: 0;
+    overflow: hidden;
+    transition: all 0.3 ease-in-out;
+
+}
+
+.menu-links a{
+    display: block;
+    padding: 10px;
+    text-align: center;
+    font-size: 1.5rem;
+    color: rgb(15, 15, 15);
+    text-decoration: none;
+    transition: all 0.3 ease-in-out;
+
+}
+
+.menu-links li{
+    list-style: none;
+
+}
+
+.menu-links.open{
+    max-height: 300px;
+}
+
+.hamburger-icon.open span:first-child{
+    transform: rotate(45deg) translate(10px, 5px);
+}
+
+.hamburger-icon.open span:nth-child(2){
+    opacity: 0;
+}
+.hamburger-icon.open span:last-child{
+    transform: rotate(-45deg) translate(10px, -5px);
+}
+.hamburger-icon span:first-child{
+    transform: none;
+}
+.hamburger-icon span:first-child{
+    opacity: 1;
+}
+.hamburger-icon span:first-child{
+    transform: none;
+}
+
+/*Sections*/
+section{
+    /* padding-top: 4vh; */
+    padding-bottom: 4vh;
+    /* height: 100vh; */
+    margin: 0 8rem;
+    box-sizing: border-box;
+    min-height: fit-content;
+}
+.section-container{
+    display: flex;
+
+}
+.Section_Text{
+    align-self: center;
+    text-align: center;
+}
+.Section_Text p{
+    font-weight: 600;
+}
+.Section_Text_p1{
+    padding-top: 3rem;
+    font-size: 1.1rem;
+    text-align: center;
+   
+}
+.Section_Text_p2{
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+    color: rgb(235, 235, 235);
+
+}
+.title{
+    color: #E5E5CB;
+    font-size: 3rem;
+    text-align: center;
+}
+.arrow {
+    
+    position: absolute;
+    right: -5rem;
+    bottom: 2.5rem;
+}
+.icon{
+    cursor: pointer;
+    height: 2rem
+}
+/* profile section */
+#profile{
+    position: relative;
+}
+.profile-section {
+    position: relative;
+    z-index: -1;
+    background-image: url('../asset/place-pic.jpg');
+    background-size: cover; /* optional, to cover the entire section */
+    height: 100vh;
+}
+.bg-pic{
+    width: 100%;
+    height: 80%;
+    object-fit: cover
+}
+.main-title {
+    color: white;
+    font-size: 5rem;
+    text-align: center;
+    padding-top: 14rem;
+    font-family: "DM Serif Display";
+}
+/*About Section*/
+#about{
+    position: relative;
+}
+.about-section{
+    padding-top: 20px;
+    background-image: url('../asset/brown.png');
+    background-size: cover; /* optional, to cover the entire section */
+   
+}
+.about-containers {
+    gap: 2rem;
+    margin-bottom: 2rem;
+    
+  
+}
+  
+.about-details-container {
+    justify-content: center;
+}
+  
+.about-containers,
+  .about-details-container {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  
+.details-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+   
+    
+  }
+
+.inline-icon{
+    display: flex;
+   
+    justify-content: center;
+    
+    gap: 0.5rem;
+    
+}
+.section-container {
+    gap: 4rem;
+    height: 80%;
+  }
+
+.text-container{
+   
+    margin: 1%;
+    padding: 20px;
+    margin-top: 1rem;
+    font-family: poppins;
+    font-size: 1.5rem;
+    text-align: justify;
+    
+}
+
+.service-card{
+    position: relative;
+    display: flex;
+    justify-content: flex-end;
+    flex-direction: column;
+    height: 300px; /* Adjust height as needed */
+    width: 200px; /* Adjust width as needed */
+   border-radius: 1.5rem;
+   
+    
+    margin: 10px;
+    background-size: cover; /* Ensure the background image covers the card */
+    background-position: center; /* Center the background image */
+    background-repeat: no-repeat; /* Prevent the background image from repeating */
+    overflow: hidden;
+}
+.service-card:hover{
+    scale: 1.1;
+    cursor: pointer;
+   
+}
+#item{
+    color: #ffffff;
+    font-weight: 400;
+    font-size: 1rem;
+    font-family: poppins;
+    
+}
+
+
+.card-data {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin-top: auto; /* Pushes the content to the bottom */
+    gap: 0.5rem;
+    padding: 5px;
+
+}
+.service-card .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.2); /* Adjust the opacity and color as needed */
+}
+.bx{
+    color: white;
+}
+
+/* JOIN US */
+
+.contact-section{
+    /* background-image: url('../asset/2.png'); */
+    background-size: cover; /* optional, to cover the entire section */
+   
+ }
+
+.signup-link-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 2rem;
+}
+
+.signup-link {
+    display: inline-block;
+    padding: 0.75rem 1.5rem;
+    border: none;
+    border-radius: 4px;
+    background-color: #f4a261;
+    color: #1a120b;
+    font-size: 1rem;
+    font-weight: 600;
+    text-decoration: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.signup-link:hover {
+    background-color: #e76f51;
+}
+/* footer section */
+
+footer{
+    height: 26vh;
+    margin: 0 1rem;
+
+}
+
+footer p{
+    text-align: center;
+    
+}

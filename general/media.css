@@ -1,0 +1,157 @@
+@media screen and (max-width: 1400px) {
+    #profile{
+       height: 83vh;
+       margin-bottom: 6rem;
+
+    }
+    .about-container{
+        flex-wrap: wrap;
+    }
+    #contact,
+    #projects{
+        height: fit-content;
+    }
+    .service-card[data-card="1"] {
+        background-image: url('/asset/f.jpg');
+    }
+    .service-card[data-card="2"] {
+        background-image: url('/asset/o.jpg');
+    }
+    .service-card[data-card="3"] {
+        background-image: url('/asset/p.jpg');
+    }
+    .service-card[data-card="4"] {
+        background-image: url('/asset/c.jpg');
+    }
+}
+@media screen and (max-width: 1200px) {
+    #dekstop-nav{
+        display: none;
+
+    }
+    #hamburger-nav{
+        display: flex;
+    }
+   
+    #profile, .section-container{
+        display: block;
+    }
+    .arrow{
+        display: none;
+    }
+    section, .section-container{
+        height: fit-content;
+    }
+    section{
+        margin: 0 5%;
+      
+    }
+    .section_pic-container{
+        width: 274px;
+        height: 275px;
+        margin: 0 auto ;
+    }
+    .about-container{
+        margin-top: 0;
+    }
+    
+    .video-text-container{
+        display: flex;
+        flex-direction: column;
+        padding-bottom: 3rem;
+      
+    }
+    
+   
+    .text-container{
+        font-size: 15px;
+    }
+    .details-container{
+        font-size: 10px;
+        flex-direction: column;
+        margin: auto;
+    }
+    .about-details-container{
+        flex-direction: column;
+    }
+    .about-containers{
+        justify-content: center;
+     
+    }
+   
+    .service-card{
+        height: 50px;
+        width: 300px;
+    }
+    
+}
+
+@media screen and (max-width: 600px){
+    #contact, footer{
+        height: 40vh;
+    }
+    #profile{
+        height: 84vh;
+        margin-bottom: 0;
+    }
+    article{
+        font-size: 1rem;
+    }
+    footer nav{
+        height: fit-content;
+        margin-bottom: 2rem;
+    }
+    
+
+    .about-containers, .contact-info-upper-container, .btn-container{
+        flex-wrap: wrap;
+    }
+    .contact-info-container{
+        margin: 0;
+    }
+    .contact-info-container p,
+    .nav-link li a{
+        font-size: 1rem;
+    }
+    .logo{
+        font-size: 1.75rem;
+    }
+    .nav-links{
+        flex-direction: column;
+        gap: 0.5rem;
+        text-align: center;
+    }
+    .section_pic-container{
+        width: auto;
+        height: 46vw;
+        justify-content: center;
+    }
+    .Section_Text_p2{
+        font-size: 1.25rem;
+    }
+    .title{
+        font-size: 2rem;
+
+    }
+    .text-container{
+        text-align: justify;
+    }
+
+    .video-text-container{
+        display: flex;
+        flex-direction: column;
+        padding-bottom: 3rem;
+      
+    }
+   
+   .details-conatiner{
+    font-size: 18px;
+    width: 50%;
+   
+  
+   }
+   .about-containers{
+    flex-direction: column;
+   }
+   
+}
