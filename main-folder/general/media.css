@@ -12,16 +12,16 @@
         height: fit-content;
     }
     .service-card[data-card="1"] {
-        background-image: url('/asset/f.jpg');
+        background-image: url('../asset/f.jpg');
     }
     .service-card[data-card="2"] {
-        background-image: url('/asset/o.jpg');
+        background-image: url('../asset/o.jpg');
     }
     .service-card[data-card="3"] {
-        background-image: url('/asset/p.jpg');
+        background-image: url('../asset/p.jpg');
     }
     .service-card[data-card="4"] {
-        background-image: url('/asset/c.jpg');
+        background-image: url('../asset/c.jpg');
     }
 }
 @media screen and (max-width: 1200px) {

@@ -9,7 +9,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Gallery Café</title>
-    <link rel="stylesheet" href="media.css">
+    <link rel="stylesheet" href="../general/media.css">
 </head>
 <body>
     <nav id="dekstop-nav">
@@ -115,7 +115,7 @@
             <p class="Section_Text_p1">Join us</p>
             <h1 class="title">Sign Up Today!</h1>
             <div class="signup-link-container">
-                <a href="../SignUp/signup.php" class="signup-link">Sign Up Now</a>
+                <a href="../SignUp/common-page.php" class="signup-link">Sign Up Now</a>
             </div>
         </div>
     </section>

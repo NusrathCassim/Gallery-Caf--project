@@ -11,23 +11,23 @@
 <body>
     <div class="sidebar">
         <div class="logo-Details">
-            <a href="../general/home.php">
+           
             <i class='bx bx-cube'></i></a>
             <span class="logo_name"; font-family="DM Serif Display";>Gallery Café</span>
             
         </div>
         
             <ul class="nav-links">
-                <li><a href="../../customer/menu/menu.php">
+                <li><a href="/main-folder/customer/menu/menu.php">
                         <i class='bx bx-sitemap'></i>
                         <span class="link_name">
-                        Menu
+                            Menu
                         </span>
                 </a></li>
-                <li><a href="../todo/todo.php">
+                <li><a href="">
                     <i class='bx bxs-check-circle'></i>
                     <span class="link_name">
-                    Reservations
+                        Reservations
                     </span>
                 </a></li>
                 <li>
