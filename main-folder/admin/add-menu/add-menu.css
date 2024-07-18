@@ -1,0 +1,77 @@
+.next {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   
+}
+
+/* Form container */
+.form-menu {
+    background-color: #FAF8F1; /* Lightest color for the form background */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    max-width: 500px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Form elements */
+.form-menu label {
+    margin: 10px 0 5px;
+    font-weight: bold;
+    color: #C58940; /* Darkest color for labels */
+}
+
+.form-menu input[type="text"],
+.form-menu input[type="number"],
+.form-menu input[type="file"] {
+    padding: 10px;
+    border: 1px solid #E5BA73; /* Border color */
+    border-radius: 5px;
+    width: 100%;
+    box-sizing: border-box;
+    background-color: #FAF8F1; /* Lightest color for input background */
+}
+
+.form-menu textarea {
+    padding: 10px;
+    border: 1px solid #E5BA73; /* Border color */
+    border-radius: 5px;
+    width: 100%;
+    height: 100px; /* Fixed height for the description box */
+    box-sizing: border-box;
+    background-color: #FAF8F1; /* Lightest color for input background */
+    resize: none; /* Prevent resizing */
+    overflow: hidden; /* Hide overflow */
+}
+
+.form-menu .vegan-checkbox {
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.form-menu input[type="checkbox"] {
+    margin-right: 10px;
+}
+
+.form-menu input[type="submit"] {
+    margin-top: 20px;
+    padding: 10px;
+    background-color: #C58940; /* Dark color for the submit button */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.form-menu input[type="submit"]:hover {
+    background-color: #E5BA73; /* Slightly lighter color for hover */
+}
+
+/* Add some spacing between elements */
+.form-menu br {
+    display: none;
+}
