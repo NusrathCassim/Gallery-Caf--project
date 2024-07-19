@@ -1,0 +1,203 @@
+.next {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.cards {
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    padding-left: 20px;
+    padding-right: 20px;
+    scroll-behavior: smooth;
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+}
+
+.cards::-webkit-scrollbar {
+  display: none;
+}
+
+.card {
+    margin: 10px;
+    width: 300px; /* adjust the width to make the cards smaller */
+    background-color: #ffffff;
+    border: 1px solid #E5BA73;
+    border-radius: 10px;
+    padding: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+    flex: 0 0 auto; /* add this to make the cards not shrink or grow */
+    display: flex;
+    flex-direction: column;
+}
+
+.card:hover {
+    transform: scale(1.02);
+}
+
+.card img {
+    width: 100%;
+    height: 150px; /* adjust the height to make the images smaller */
+    object-fit: cover;
+    border-radius: 10px 10px 0 0;
+}
+
+.card h3 {
+    font-size: 16px;
+    margin-top: 0;
+    color: #4d3313;
+}
+
+.card p {
+    font-size: 13px;
+    margin-bottom: 10px;
+}
+
+.card-content {
+    flex-grow: 1;
+    padding: 5px;
+}
+
+.card-footer {
+    background-color: #f7f7f7;
+    padding: 10px;
+    
+    border-top: 1px solid #ddd;
+    gap: 2rem;
+    display: flex;
+}
+
+.card-footer input[type="submit"], input[type="delete"] {
+    margin-top: 0;
+    padding: 10px;
+    background-color: #C58940; /* Dark color for the submit button */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    width: 100px;
+    text-align: center;
+    cursor: pointer;
+}
+
+.card-footer input[type="submit"]:hover {
+    background-color: #d3a355; /* Slightly lighter color for hover */
+}
+/* Edit pop-up styles */
+.next-content {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    justify-content: center;
+    align-items: center;
+}
+
+.next-content.active {
+    display: flex;
+    
+}
+
+
+.box.form-box {
+    background-color: #FAEAB1;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    max-width: 500px;
+    width: 100%;
+}
+
+.button_cancel {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.cancel_icon {
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    color: #C58940;
+}
+
+.field {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.field label {
+    flex: 1;
+    color: #C58940;
+}
+
+.field input[type="text"],
+.field input[type="number"],
+.field input[type="file"],
+.field textarea {
+    flex: 2;
+    padding: 10px;
+    border: 1px solid #E5BA73;
+    border-radius: 5px;
+    background-color: #FAF8F1;
+    color: #333;
+}
+
+.field textarea {
+    resize: none;
+}
+
+.vegan-checkbox {
+    display: flex;
+    align-items: center;
+}
+
+.vegan-checkbox input[type="checkbox"] {
+    margin-right: 10px;
+}
+
+.vegan-checkbox label {
+    color: #C58940;
+}
+
+.field-btn {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.field-btn .btn1 {
+    background-color: #C58940;
+    color: #FAF8F1;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.field-btn .btn1:hover {
+    background-color: #E5BA73;
+}
+
+input[type="submit"]:hover,
+input[type="reset"]:hover {
+    background-color: #E5BA73;
+}
+
+input[type="submit"],
+input[type="reset"] {
+    background-color: #C58940;
+    color: #FAF8F1;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
