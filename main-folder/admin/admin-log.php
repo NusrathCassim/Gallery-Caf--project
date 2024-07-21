@@ -45,6 +45,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login</title>
     <link rel="stylesheet" href="../SignUp/common.css">
+    <script type="text/javascript">
+        function preventBack() {
+            window.history.forward();
+        };
+        setTimeout("preventBack()", 0);
+        window.onunload = function() {null;}
+    </script>
     
 </head>
 <body>
@@ -71,6 +78,9 @@
                 <div class="field">
                     
                     <input type="submit" class= "btn " name="submit" value="Login" required>
+                </div>
+                <div class="link" style="color: aliceblue;">
+                    Customer login <a href="/main-folder/SignUp/login.php">clcik here</a>
                 </div>
                 
                

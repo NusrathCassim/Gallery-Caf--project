@@ -1,0 +1,136 @@
+.next {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap; /* Allow wrapping on smaller screens */
+    padding: 5px;
+}
+
+.card_set {
+    display: flex;
+    flex-wrap: wrap; /* Allow cards to wrap on smaller screens */
+    justify-content: center; /* Center the card horizontally */
+    align-items: center; /* Center the card vertically */
+    gap: 1rem;
+    padding: 20px;
+    margin-top: 20px;
+    width: 100%; /* Make sure it takes full width of the container */
+}
+
+.card {
+    background-color: #ffffff; /* Background color */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    padding: 20px; /* Inner padding */
+    text-align: center; /* Center text */
+    width: 300px; /* Fixed width */
+    max-width: 100%; /* Make it responsive */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth hover effects */
+}
+
+.card:hover {
+    transform: translateY(-10px); /* Lift effect on hover */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Deeper shadow on hover */
+}
+.counter{
+    font-weight: 500;
+    font-size: 1.6rem;
+}
+.card h2 {
+    color: #C58940;
+    /* margin-bottom: 15px; */
+    font-size: 24px;
+    font-weight: 600;
+}
+i.bx.bxs-cube-alt, .bxs-user-circle, .bxs-food-menu {
+    font-size: 2rem;
+    display: flex;
+    padding: 10px;
+}
+.header {
+    align-items: center;
+    display: flex;
+    gap: 1rem;
+}
+.card p {
+    color: #333; /* Text color */
+    font-size: 18px; /* Font size */
+    margin: 0; /* Remove default margin */
+}
+table {
+    border-collapse: separate;
+    border-spacing: 0 10px; 
+    width: 100%;
+    background-color: #FAEAB1; 
+    border-radius: 10px; 
+    overflow: hidden;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); 
+  }
+  
+  table th, table td {
+    border: none;
+    padding: 10px; 
+    text-align: left;
+    background-color: #FFFFFF; 
+  }
+  
+  table th {
+    background-color: #C58940;
+    color: white;
+    font-weight: bold;
+    text-align: center; 
+  }
+  
+  table tr:nth-child(even) {
+    background-color: #FAF8F1; 
+  }
+  
+  table tr:nth-child(odd) {
+    background-color: #FFFFFF; 
+  }
+  
+  table tr:hover {
+    background-color: #F7F7F7;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); 
+  }
+  .other{
+
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+  }
+  
+  .card2{
+    background-color: #644219; /* Background color */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    padding: 10px; /* Inner padding */
+    text-align: center; /* Center text */
+    width: 300px; /* Fixed width */
+    max-width: 100%; /* Make it responsive */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth hover effects */
+    color: #FAEAB1;
+
+   
+  }
+  .card2 .bx{
+    display: flex;
+    padding: 10px;
+    font-size: 20px;
+  }
+  .card2 .counter{
+    font-size: 15px;
+    flex: 1;
+}
+  .card2 h2 {
+    color: #ffffff;
+    /* margin-bottom: 15px; */
+    font-size: 15px;
+    font-weight: 400;
+}
+.card_set2{
+    justify-content: center;
+    gap: 1rem;
+    display: flex;
+    flex-direction: column;
+}
