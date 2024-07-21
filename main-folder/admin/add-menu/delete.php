@@ -15,7 +15,7 @@ if (isset($_GET['id'])) {
         $_SESSION['alert'] = 'Error deleting menu item!';
     }
 } else {
-    $_SESSION['alert'] = 'Invalid menu item!';
+    $_SESSION['alert'] = 'Error Occurred!';
 }
 
 // Redirect back to the previous page

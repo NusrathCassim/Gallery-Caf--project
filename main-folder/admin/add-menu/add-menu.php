@@ -1,7 +1,7 @@
 <?php
-    session_start(); // Start the session to use session variables
-    include('../../connection/connection.php'); // Adjust this path if necessary
-    $success = false; // Initialize the success variable
+    session_start(); 
+    include('../../connection/connection.php'); 
+    $success = false;
     
     // Check if the form has been submitted
     if ($_SERVER["REQUEST_METHOD"] == "POST") {
@@ -40,9 +40,9 @@
             // Check if the data was inserted successfully
             if ($stmt->affected_rows > 0) {
                 $success = true;
-                // Set a session variable for displaying the alert
+               
                 $_SESSION['alert'] = "Menu item added successfully!";
-                // Redirect to the same page to prevent form resubmission
+               
                 header("Location: add-menu.php");
                 exit();
             } else {
