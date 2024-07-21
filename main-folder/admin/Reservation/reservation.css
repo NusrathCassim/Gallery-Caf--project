@@ -1,0 +1,132 @@
+.next {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: row;
+    gap: 2rem;
+   
+}
+.form_table {
+    margin: 10px;
+    background-color: #FAF8F1; /* Lightest color for the form background */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    max-width: 500px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+.display_tables{
+    background-color: #4d3313;
+    padding: 20px;
+    border-radius: 1.5rem;
+    height: 500px;
+    overflow-y: scroll;
+    scroll-behavior: smooth;
+    scrollbar-width: none;
+}
+/* Form elements */
+.form_table label {
+    margin: 10px 0 5px;
+    font-weight: bold;
+    color: #C58940; /* Darkest color for labels */
+}
+
+.form_table input[type="text"]{
+    padding: 10px;
+    border: 1px solid #E5BA73; /* Border color */
+    border-radius: 5px;
+    width: 100%;
+    box-sizing: border-box;
+    background-color: #FAF8F1; /* Lightest color for input background */
+}
+
+
+.form_table input[type="submit"], .form_table input[type="reset"] {
+    margin-top: 20px;
+    padding: 10px;
+    background-color: #C58940; /* Dark color for the submit button */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.form_table input[type="submit"]:hover, .form_table input[type="reset"]:hover {
+    background-color: #E5BA73; /* Slightly lighter color for hover */
+}
+
+/* Add some spacing between elements */
+.form_table br {
+    display: none;
+}
+.cards{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.card {
+    margin: 0;
+    width: 300px;
+    background-color: #ffffff;
+    border: 1px solid #E5BA73;
+    border-radius: 10px;
+    padding: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+    flex: 0 0 auto;
+    
+    display: flex;
+    flex-direction: row;
+    height: 100px; /* Adjust the height to ensure all cards are the same */
+}
+
+.card:hover {
+    transform: scale(1.02);
+}
+.card h3 {
+    font-size: 18px;
+    margin-top: 0;
+   
+    color: #4d3313;
+}
+.card-content {
+    padding: 10px;
+    flex: 1;
+}
+.card p {
+  
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+input.btn  {
+   
+    margin:10px;
+    padding: 5px;
+    background-color: #C58940; /* Dark color for the submit button */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    width: 100px;
+    text-align: center;
+    height: 50px;
+    cursor: pointer;
+}
+@media (max-width: 1199px) {
+    .next {
+      flex-direction: column;
+    }
+    .display_tables {
+        scale: 0.8;
+    }
+    .home-content {
+        font-size: small;
+    }
+    .home-section .home-content .text {
+        font-size: 20px;
+    }
+    .form_table {
+        margin: 0px;
+    }
+  }
