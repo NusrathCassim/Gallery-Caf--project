@@ -1,22 +1,29 @@
 <?php
-    session_start();
-     if(isset($_POST["submit"])){
-        include('../connection/connection.php'); // Adjust this path if necessary
-        $username = mysqli_real_escape_string($conn, $_POST["username"]);
-        $password = mysqli_real_escape_string($conn, $_POST["password"]);
+session_start();
 
-        $sql = "select * from users where username = '$username'";
-        $result = mysqli_query($conn, $sql);
+if (isset($_POST["submit"])) {
+    include('../connection/connection.php'); // Adjust this path if necessary
+
+    // Sanitize input to prevent SQL injection
+    $username = mysqli_real_escape_string($conn, $_POST["username"]);
+    $password = mysqli_real_escape_string($conn, $_POST["password"]);
+
+    // Query the database for the user
+    $sql = "SELECT * FROM users WHERE username = '$username'";
+    $result = mysqli_query($conn, $sql);
+
+    if ($result) {
         $row = mysqli_fetch_array($result, MYSQLI_ASSOC);
 
-        if($row){
-            if(password_verify($password, $row["password"])){
-                $_SESSION["username"] = $username;
-                $_SESSION["user_id"] = $row["Id"]; // Store user_id in session
-                header("Location: ../general/home.php");
-            }
-        }
-        else{
+        // Check if the user exists and verify the password
+        if ($row && password_verify($password, $row["password"])) {
+            $_SESSION["username"] = $username;
+            $_SESSION["user_id"] = $row["id"]; // Store user_id in session
+
+            header("Location: /main-folder/general/home.php");
+           
+        } else {
+            // Display an error message if authentication fails
             echo "<script>
                     document.addEventListener('DOMContentLoaded', function() {
                         var modal = document.getElementById('myModal');
@@ -24,12 +31,10 @@
 
                         var span = document.getElementsByClassName('close')[0];
 
-                        // When the user clicks on <span> (x), close the modal
                         span.onclick = function() {
                             modal.style.display = 'none';
                         }
 
-                        // When the user clicks anywhere outside of the modal, close it
                         window.onclick = function(event) {
                             if (event.target == modal) {
                                 modal.style.display = 'none';
@@ -38,8 +43,12 @@
                     });
                 </script>";
         }
-        
+    } else {
+        echo "Error: " . $conn->error;
     }
+
+   
+}
 ?>
 
 
