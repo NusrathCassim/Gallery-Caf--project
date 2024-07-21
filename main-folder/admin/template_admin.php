@@ -36,12 +36,22 @@
                     </ul>
                 
                 </li>
-                <li><a href="">
-                    <i class='bx bxs-check-circle'></i>
-                    <span class="link_name">
-                    Check Reservations
-                    </span>
-                </a></li>
+                <li>
+                    <div class="icon-link">
+                        <a href="">
+                            <i class='bx bxs-check-circle'></i>
+                            <span class="link_name">
+                                    Reservations
+                            </span>
+                        </a><i class="bx bx-chevron-down arrow"></i>
+                    </div>
+                    <ul class="sub-menu">
+                        <li><a class="link_name" href=""> Reservation</a></li>
+                        <li><a href="/main-folder/admin/Reservation/add_tables.php">Add Tables</a></li>
+                        <li><a href="/main-folder/admin/Reservation/bookings.php">Manage</a></li>
+                    </ul>
+                    
+                </li>
                 <li>
                     <div class="icon-link">
                         <a href="#">
