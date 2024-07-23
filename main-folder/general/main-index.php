@@ -1,10 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-     <!-- Boxicons CSS -->
-     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-   
-    
+    <link rel="icon" type="image/x-icon" href="/main-folder/asset/logo.png">
     <link rel="stylesheet" href="main-page.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">

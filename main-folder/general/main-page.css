@@ -264,17 +264,20 @@ section{
     height: 80%;
   }
 
-.text-container{
-   
-    margin: 1%;
-    padding: 20px;
-    margin-top: 1rem;
-    font-family: poppins;
-    font-size: 1.5rem;
-    text-align: justify;
-    
+
+.about-details-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
 }
 
+.about-details-container .text-container p {
+    margin-bottom: 2rem;
+    color: #ffffff;
+    font-size: 1.5rem;
+    padding: 20px;
+}
 .service-card{
     position: relative;
     display: flex;
