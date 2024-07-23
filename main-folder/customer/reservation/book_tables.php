@@ -100,13 +100,13 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             </div>
             <div class="message">
                 <marquee>Reservation Details will be sent to your email</marquee>
-            </div>
-            <!-- <div class="display_submit_data">
+            
+             <div class="display_submit_data">
                 
                 <?php
                 //fetch accepted reservations relevant to the user
                 $user_id = $_SESSION['user_id']; // Get the user ID from the session
-                $stmt = $conn->prepare("SELECT * FROM reservations WHERE user_id = ?");
+                $stmt = $conn->prepare("SELECT * FROM reservations WHERE user_id = ? and status = 'pending'");
                 $stmt->bind_param("i", $user_id);
                 $stmt->execute();
                 $result = $stmt->get_result();
@@ -114,22 +114,14 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                     echo "<div class='cards'>";
                     while($row = $result->fetch_assoc()){
                         echo "<div class='card'>";
-                        echo "<p>Table Number: " . $row['table_number'] . "</p>";
+                        echo "<p>Reservation ID:  GC_RID". $row['id'] . "</p>";
                         echo "<p>Number of Guests: " . $row['num_guests'] . "</p>";
                         echo "<p>Date: " . $row['reservation_date'] . "</p>";
-                        echo "<p>Time: " . $row['reservation_time'] . "</p>";
                         // Translate the status value to a user-friendly text
                         $status_text = '';
                         switch ($row['status']) {
                             case 'pending':
                                 $status_text = 'Reservation Pending';
-                                break;
-                            case 'confirmed':
-                                $status_text = 'Reservation Confirmed';
-                                break;
-                            case 'rejected':
-                                $status_text = 'Reservation Rejected';
-                                break;
                         }
                         echo "<p>Status: " . $status_text . "</p>";
                         echo "</div>"; // close the card div
@@ -140,8 +132,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 }
                 ?>
              </div>
-           -->
-
+             </div>
         </div>
     </section>
     <script>

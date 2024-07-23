@@ -14,7 +14,7 @@
 }
 
 .form-book {
-    background-color: #FAF8F1; /* Lightest color for the form background */
+    background-color: #FAF8F1; 
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
@@ -22,21 +22,21 @@
     width: 100%;
     display: flex;
     flex-direction: column;
-    gap: 1rem; /* Add gap between form rows */
+    gap: 1rem; 
 }
 
 /* Form rows */
 .form-row {
     display: flex;
     align-items: center;
-    gap: 1rem; /* Space between label and input */
+    gap: 1rem; 
 }
 
 /* Form elements */
 .form-book label {
-    flex: 1; /* Label takes up one part of the space */
+    flex: 1; 
     font-weight: bold;
-    color: #C58940; /* Darkest color for labels */
+    color: #C58940; 
 }
 
 .form-book input[type="text"],
@@ -44,13 +44,13 @@
 .form-book input[type="time"],
 .form-book input[type="email"],
 .form-book input[type="number"] {
-    flex: 2; /* Input takes up two parts of the space */
+    flex: 2; 
     padding: 10px;
-    border: 1px solid #E5BA73; /* Border color */
+    border: 1px solid #E5BA73;
     border-radius: 5px;
-    width: 100%; /* Ensure inputs take full width within flex item */
+    width: 100%;
     box-sizing: border-box;
-    background-color: #FAF8F1; /* Lightest color for input background */
+    background-color: #FAF8F1;
 }
 
 .form-book textarea {
@@ -58,18 +58,18 @@
     border: 1px solid #E5BA73; /* Border color */
     border-radius: 5px;
     width: 100%;
-    height: 100px; /* Fixed height for the description box */
+    height: 100px;
     box-sizing: border-box;
-    background-color: #FAF8F1; /* Lightest color for input background */
-    resize: none; /* Prevent resizing */
-    overflow: auto; /* Hide overflow */
+    background-color: #FAF8F1; 
+    resize: none; 
+    overflow: auto; 
 }
 
 .form-book input[type="submit"], .form-book input[type="reset"] {
     margin-top: 20px;
     padding: 10px;
     width: 200px;
-    background-color: #C58940; /* Dark color for the submit button */
+    background-color: #C58940;
     color: white;
     border: none;
     border-radius: 5px;
@@ -77,7 +77,7 @@
 }
 
 .form-book input[type="submit"]:hover, .form-book input[type="reset"]:hover {
-    background-color: #E5BA73; /* Slightly lighter color for hover */
+    background-color: #eba83d; /* Slightly lighter color for hover */
 }
 
 /* Add some spacing between elements */
@@ -93,31 +93,40 @@
 }
 
 .display_submit_data {
-    margin: 20px;
-    background-color: #FAF8F1;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
+    border-radius: 1.5rem;
+    height: 400px;
 
+    overflow-y: auto; /* Enable vertical scrolling */
+    margin-top: 20px;
+    padding: 20px;
+    scroll-behavior: smooth;
+    scrollbar-width: thin;
+}
+.message {
+    background-color: #faeab1;
+    border-radius: 10px;
+}
 .cards {
     display: flex;
     flex-wrap: wrap;
     gap: 20px;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    
 }
 
 .card {
-    background-color: #FAEAB1;
+    background-color: #ffffff;
     border: 1px solid #E5BA73;
-    border-radius: 8px;
+    border-radius: 2rem;
     padding: 15px;
-    width: 250px;
+    width: 400px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     transition: transform 0.2s;
 }
-
 .card p {
-    color: #C58940;
+    color: #000000;
     margin: 5px 0;
 }
 
@@ -125,8 +134,9 @@
     transform: translateY(-5px);
 }
 marquee {
+    color: #ffffff;
     font-size: larger;
-    font-weight: 500;
+    font-weight: 400;
 }
 /* Media query for responsive design */
 @media (max-width: 1199px) {
