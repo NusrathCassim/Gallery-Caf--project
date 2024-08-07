@@ -17,7 +17,7 @@
 } */
 body {
    
-    background: linear-gradient(175deg, #FFC95F, #862B0D), url(../asset/noice.svg);
+    background: linear-gradient(175deg, #FFC95F, #ff6431), url(../asset/noice.svg);
     background-blend-mode: overlay; /* Optional, to blend the image and gradient */
 }
 

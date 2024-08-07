@@ -97,6 +97,9 @@ if (isset($_POST["submit"])) {
                 <div class="link" style="color: aliceblue;">
                     Already an member <a href="login.php">Log-in Now</a>
                 </div>
+                <div class="link" style="color: aliceblue;">
+                    back to  <a href="/main-folder/SignUp/common-page.php">Back</a>
+                </div>
                 
             </form>
             
