@@ -1,0 +1,112 @@
+/* Card set styling */
+.next{
+    flex-direction: column;
+}
+.card_set2 {
+    width: 100%;
+    justify-content: center;
+    display: flex;
+    gap: 20px;
+    padding: 10px;
+    flex-direction: row;
+    margin-bottom: 20px;
+}
+
+.card2 {
+    background-color: #FFF;
+    border: 1px solid #E5BA73;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 200px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: transform 0.3s ease;
+}
+
+.card2:hover {
+    transform: translateY(-5px);
+}
+
+.card2 .header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin-bottom: 10px;
+}
+
+.card2 .header i {
+    font-size: 30px;
+    color: #C58940;
+    margin-bottom: 10px;
+}
+
+.card2 .header h2 {
+    margin: 0;
+    color: #333;
+    font-size: 22px;
+}
+
+.card2 .counter {
+    font-size: 28px;
+    font-weight: bold;
+    color: #C58940;
+    margin-top: 5px;
+}
+
+/* Pre-order table styles */
+.pre-order {
+   
+   
+  
+    padding: 20px;
+   
+}
+
+.pre-order table {
+    
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+
+.pre-order table, .pre-order th, .pre-order td {
+    border: 1px solid #E5BA73;
+}
+
+.pre-order th, .pre-order td {
+    padding: 10px;
+    text-align: left;
+}
+
+.pre-order th {
+    background-color: #80592a;
+    color: #faf8f1;
+    font-weight: bold;
+}
+
+
+
+.pre-order tr:hover {
+    background-color: #FAF8F1;
+}
+
+.pre-order form {
+    display: inline-block;
+}
+
+.pre-order button {
+    padding: 5px 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #C58940;
+    color: #FFF;
+    cursor: pointer;
+    margin-right: 5px;
+}
+
+.pre-order button:hover {
+    background-color: #A86B2E;
+}

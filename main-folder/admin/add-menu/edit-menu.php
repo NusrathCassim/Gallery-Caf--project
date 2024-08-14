@@ -69,7 +69,7 @@
                             }
                                 echo '<h3>' . htmlspecialchars($fetch['Item']) . '</h3>';
                                 echo '<p>Cuisine: ' . htmlspecialchars($fetch['Cuisine']) . '</p>';
-                                echo '<p>Price: $' . htmlspecialchars($fetch['Price']) . '</p>';
+                                echo '<p>Price: Rs ' . htmlspecialchars($fetch['Price']) . '</p>';
                                 echo '<p> ' . htmlspecialchars($fetch['Description']) . '</p>';
                                 echo '</div>'; // Close card-content
                                 echo '<div class="card-footer">';

@@ -54,7 +54,7 @@
                 </li>
                 <li>
                     <div class="icon-link">
-                        <a href="#">
+                        <a href="/main-folder/admin/pre-order/pre-order-check.php">
                             <i class='bx bxs-heart-circle'></i>
                                 <span class="link_name">
                                 Check Pre-Order Meals
@@ -67,7 +67,7 @@
                 <li><a href="#">
                     <div class="icon-link">
                         <a href="/main-folder/admin/add-specialEvents/add_specialEvents.php">
-                            <i class='bx bx-cog'></i>
+                        <i class='bx bxs-party'></i>
                             <span class="link_name">
                                 Special Events
                             </span>
@@ -81,14 +81,20 @@
                     </ul>
             
                 </li>
-                <li><a href="#">
-                    <i class='bx bx-grid-alt'></i>
+                <li><a href="/main-folder/admin/cutomer-review/manage-cr.php">
+                <i class='bx bx-edit'></i>
                         <span class="link_name">
                         Customer Reviews
                         </span>
                 </a></li>
+                <li><a href="/main-folder/admin/staff-manage/add-staff.php">
+                <i class='bx bxs-user'></i>
+                    <span class="link_name">
+                        Add Staff
+                    </span>
+                </a></li>
                 <li><a href="/main-folder/SignUp/logout.php">
-                    <i class='bx bx-grid-alt'></i>
+                <i class='bx bx-log-out'></i>
                     <span class="link_name">
                         Logout
                     </span>

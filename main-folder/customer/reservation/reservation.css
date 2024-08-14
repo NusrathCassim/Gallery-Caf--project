@@ -102,9 +102,19 @@
     scroll-behavior: smooth;
     scrollbar-width: thin;
 }
+.marq-box{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #ffffff;
+    color: #000000;
+    border-top-left-radius: 0.5rem;
+    border-top-right-radius: 0.5rem;
+}
 .message {
     background-color: #faeab1;
     border-radius: 10px;
+    color: #eba83d;
 }
 .cards {
     display: flex;
@@ -119,7 +129,7 @@
 .card {
     background-color: #ffffff;
     border: 1px solid #E5BA73;
-    border-radius: 2rem;
+    border-radius: 1.2rem;
     padding: 15px;
     width: 400px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -127,17 +137,14 @@
 }
 .card p {
     color: #000000;
+    font-weight: 700;
     margin: 5px 0;
 }
 
 .card:hover {
     transform: translateY(-5px);
 }
-marquee {
-    color: #ffffff;
-    font-size: larger;
-    font-weight: 400;
-}
+
 /* Media query for responsive design */
 @media (max-width: 1199px) {
     .next {

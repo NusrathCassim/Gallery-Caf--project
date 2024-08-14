@@ -18,6 +18,7 @@ body{
 html{
     scroll-behavior: smooth;
 
+
 }
 p{
     color: #ffffff;
@@ -181,14 +182,18 @@ section{
     text-align: center;
 }
 .arrow {
-    
+    color: #FAF8F1;
     position: absolute;
     right: -5rem;
     bottom: 2.5rem;
 }
-.icon{
+.icon {
+    border-radius: 2rem;
+    padding: 10px;
+    background: antiquewhite;
     cursor: pointer;
-    height: 2rem
+    /* color: azure; */
+    height: 2rem;
 }
 /* profile section */
 #profile{
@@ -283,15 +288,14 @@ section{
     display: flex;
     justify-content: flex-end;
     flex-direction: column;
-    height: 300px; /* Adjust height as needed */
-    width: 200px; /* Adjust width as needed */
-   border-radius: 1.5rem;
-   
-    
+    height: 300px; 
+    width: 200px;
+    border-radius: 1.5rem;
+   transition: all 300ms ease;
     margin: 10px;
-    background-size: cover; /* Ensure the background image covers the card */
-    background-position: center; /* Center the background image */
-    background-repeat: no-repeat; /* Prevent the background image from repeating */
+    background-size: cover; 
+    background-position: center; 
+    background-repeat: no-repeat; 
     overflow: hidden;
 }
 .service-card:hover{
@@ -371,4 +375,65 @@ footer{
 footer p{
     text-align: center;
     
+}
+.b {
+    padding: 20px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: baseline;
+    /* align-items: center; */
+    gap: 3rem;
+}
+.b h3 {
+    color: #C58940;
+    margin-bottom: 10px;
+}
+.pp
+{
+    margin: 5px;
+}
+#menu{
+    position: relative;
+}
+.signature-dish-card {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 20px;
+    width: 300px;
+    transition: all 300ms ease;
+
+}
+.signature-dish-card:hover{
+    scale: 1.05;
+}
+.dish-image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.dish-info {
+    padding: 20px;
+    height: -webkit-fill-available;
+    background-color: #FAF8F1;
+}
+.dish-title {
+    font-size: 24px;
+    color: #C58940;
+    margin: 0;
+    font-weight: bold;
+}
+
+.dish-description {
+    font-size: 16px;
+    color: #333;
+    margin-top: 10px;
+}
+.dish-container{
+    display: flex;
+    justify-content: center;
 }

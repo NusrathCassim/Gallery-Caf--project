@@ -1,23 +1,29 @@
 <?php
-    session_start(); // Ensure you start the session
-    if(isset($_POST["submit"])){
-        include('../connection/connection.php'); // Adjust this path if necessary
-        $username = mysqli_real_escape_string($conn, $_POST["username"]);
-        $password = mysqli_real_escape_string($conn, $_POST["password"]);
+session_start();
 
-        $sql = "SELECT * FROM admin WHERE username = '$username' AND password = '$password'";
-        $result = mysqli_query($conn, $sql);
+if (isset($_POST["submit"])) {
+    include('../connection/connection.php'); // Adjust this path if necessary
+
+    // Sanitize input to prevent SQL injection
+    $username = mysqli_real_escape_string($conn, $_POST["username"]);
+    $password = mysqli_real_escape_string($conn, $_POST["password"]);
+
+    // Query the database for the user
+    $sql = "SELECT * FROM staff WHERE username = '$username'";
+    $result = mysqli_query($conn, $sql);
+
+    if ($result) {
         $row = mysqli_fetch_array($result, MYSQLI_ASSOC);
 
-        if($row){
+        // Check if the user exists and verify the password
+        if ($row && password_verify($password, $row["password"])) {
             $_SESSION["username"] = $username;
-            // Instead of redirecting immediately, use a JavaScript alert and then redirect
-            echo "<script>
-                    alert('Login successful!');
-                    window.location.href = '../admin/admin-home.php';
-                  </script>";
-        }
-        else{
+            $_SESSION["staff_id"] = $row["id"]; // Store staff_id in session
+
+            header("Location: /main-folder/opr_staff/opr_home.php");
+           
+        } else {
+            // Display an error message if authentication fails
             echo "<script>
                     document.addEventListener('DOMContentLoaded', function() {
                         var modal = document.getElementById('myModal');
@@ -25,12 +31,10 @@
 
                         var span = document.getElementsByClassName('close')[0];
 
-                        // When the user clicks on <span> (x), close the modal
                         span.onclick = function() {
                             modal.style.display = 'none';
                         }
 
-                        // When the user clicks anywhere outside of the modal, close it
                         window.onclick = function(event) {
                             if (event.target == modal) {
                                 modal.style.display = 'none';
@@ -39,7 +43,12 @@
                     });
                 </script>";
         }
+    } else {
+        echo "Error: " . $conn->error;
     }
+
+   
+}
 ?>
 
 
@@ -49,14 +58,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login</title>
-    <link rel="stylesheet" href="../SignUp/common.css">
-    <script type="text/javascript">
-        function preventBack() {
-            window.history.forward();
-        };
-        setTimeout("preventBack()", 0);
-        window.onunload = function() {null;}
-    </script>
+    <link rel="stylesheet" href="/main-folder/SignUp/common.css">
     
 </head>
 <body>
@@ -65,13 +67,13 @@
             <img src="logo.png" alt="image">
         </div> -->
         <div class="container-text">
-            <h1 style="font-family: Delicious Handrawn;"> Gallery Café</h1>
+            <h1 style="font-family: Delicious Handrawn;"> Staff Login</h1>
             <p id="sub-text">Welcome to a taste of happiness.</p>
         </div>
        
         <div class="box form-box">
-            <header>Admin Login</header>
-            <form action="admin-log.php" method="post">
+            <header>Staff Login</header>
+            <form action="opr_login.php" method="post">
                 <div class="field input">
                     <label for="username">Username</label>
                     <input type="text" name="username" id="username" required>
@@ -85,10 +87,8 @@
                     <input type="submit" class= "btn " name="submit" value="Login" required>
                 </div>
                 <div class="link" style="color: aliceblue;">
-                    Customer login <a href="/main-folder/SignUp/login.php">clcik here</a><br>
                     back to  <a href="/main-folder/SignUp/common-page.php">Back</a>
                 </div>
-                
                
             </form>
             
@@ -99,7 +99,7 @@
         <div class="modal-content">
             <span class="close">&times;</span>
             <div class='message'>
-                <p>Admin Does Not Exists</p>
+                <p>User Does Not Exists</p>
             </div>
             <br>
            

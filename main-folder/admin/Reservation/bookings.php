@@ -138,11 +138,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                                 <input type='hidden' name='id' value='" . $row['id'] . "'>
                                 <select name='table_number'>
                                     <option value=''>Select Table</option>";
-                                    $table_sql = "SELECT table_no FROM res_table where status = 'free'";
+                                    $table_sql = "SELECT table_no, capacity FROM res_table where status = 'free'";
                                     $table_result = $conn->query($table_sql);
                                     if ($table_result->num_rows > 0) {
                                         while($table_row = $table_result->fetch_assoc()) {
-                                            echo "<option value='" . $table_row['table_no'] . "'>Table " . $table_row['table_no'] . "</option>";
+                                            echo "<option value='" . $table_row['table_no'] . "'>Table " . $table_row['table_no'] ." capacity " . $table_row['capacity'] . "</option>";
                                         }
                                     }
                     echo "        </select>

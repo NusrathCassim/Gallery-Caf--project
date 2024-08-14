@@ -102,7 +102,7 @@ $pending_orders = $stmt_order->get_result();
                             echo "<label class='menu_item_label'>";
                             echo "<span class='menu_item_text'>";
                             echo "<span class='menu_item_name'>$item</span>";
-                            echo "<span class='menu_item_price'>$$price</span>";
+                            echo "<span class='menu_item_price'>Rs $price</span>";
                             echo "<input type='hidden' name='menu_item_names[$menu_id]' value='$item'>";
 
                             echo "<div class='insert'>";
@@ -149,14 +149,14 @@ $pending_orders = $stmt_order->get_result();
                                         $total_price = $price * $quantity;
                                         $total_amount += $total_price;
 
-                                        echo "$item_name (Quantity: $quantity, Price: $$price, Total: $$total_price)<br>";
+                                        echo "$item_name (Quantity: $quantity, Price: Rs $price, Total: Rs $total_price)<br>";
                                     }
                                     ?>
                                 </p>
                                 <p>Order ID: <?='GC_ON'. $order['id']?> </p>
                                 <p>Visiting Date: <?= $order['visiting_date']?></p>
                                 <p id='status'>Order Status: <?= $order['status']?></p>
-                                <p>Total Amount: $<?= $total_amount ?></p>
+                                <p>Total Amount: Rs<?= $total_amount ?></p>
                                 <!-- Add this to your existing form -->
                                 <form action="pay_for_order.php" method="post">
                                     <input type="hidden" name="total_amount" value="<?= $total_amount ?>">

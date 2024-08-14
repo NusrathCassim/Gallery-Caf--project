@@ -1,0 +1,126 @@
+.next {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-wrap: wrap; /* Allow wrapping on smaller screens */
+  padding: 5px;
+}
+
+.form-staff {
+  margin: 10px;
+  background-color: #FAF8F1; /* Lightest color for the form background */
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  max-width: 250px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+table td{
+  text-align: center;
+  padding: 10px; 
+}
+/* Form elements */
+.form-staff label {
+  margin: 10px 0 5px;
+  font-weight: bold;
+  color: #C58940; /* Darkest color for labels */
+}
+
+.form-staff input[type="text"], input[type="password"]{
+  padding: 10px;
+  border: 1px solid #E5BA73; /* Border color */
+  border-radius: 5px;
+  width: 100%;
+  box-sizing: border-box;
+  background-color: #FAF8F1; /* Lightest color for input background */
+}
+
+
+.form-staff input[type="submit"]{
+  margin-top: 20px;
+  padding: 10px;
+  background-color: #C58940; /* Dark color for the submit button */
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.form-staff input[type="submit"]:hover {
+  background-color: #E5BA73; /* Slightly lighter color for hover */
+}
+
+/* Add some spacing between elements */
+.form-staff br {
+  display: none;
+}
+
+/* Table Styling */
+table {
+  border-collapse: separate;
+  border-spacing: 0 10px; 
+  width: 70%;
+  background-color: #FAEAB1; 
+  border-radius: 10px; 
+  overflow: hidden;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); 
+}
+
+table th{
+  border: none;
+  padding: 10px; 
+  text-align: left;
+  background-color: #FFFFFF; 
+}
+
+table th {
+  background-color: #C58940;
+  color: white;
+  font-weight: bold;
+  text-align: center; 
+}
+
+table tr:nth-child(even) {
+  background-color: #FAF8F1; 
+}
+
+table tr:nth-child(odd) {
+  background-color: #FFFFFF; 
+}
+
+table tr:hover {
+  background-color: #F7F7F7;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); 
+}
+/* Add this to your CSS file */
+
+.button-link {
+  background-color: #4CAF50; /* Green */
+  color: #ffffff;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  text-decoration: none;
+  border-radius: 5px;
+}
+
+.button-link:hover {
+  background-color: #3e8e41; /* Darker green on hover */
+}
+
+.button-link.delete {
+  background-color: #ff0000; /* Red */
+}
+
+.button-link.delete:hover {
+  background-color: #cc0000; /* Darker red on hover */
+}
+.b{
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+}

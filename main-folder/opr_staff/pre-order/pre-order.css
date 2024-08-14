@@ -1,0 +1,167 @@
+.next {
+    padding: 20px;
+}
+
+.pre-order {
+    background-color: #FAEAB1;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Table Styling */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+table, th, td {
+    border: 1px solid #ddd;
+}
+
+th, td {
+    padding: 10px;
+    text-align: left;
+}
+
+th {
+    background-color: #E5BA73;
+    color: #333;
+    font-weight: bold;
+}
+
+td {
+    background-color: #FAF8F1;
+    color: #333;
+}
+
+td form {
+    display: flex;
+    gap: 10px;
+}
+
+td form button {
+    padding: 5px 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-size: 14px;
+}
+
+td form button[name="action"][value="confirm"] {
+    background-color: #4CAF50;
+    color: white;
+}
+
+td form button[name="action"][value="confirm"]:hover {
+    background-color: #45a049;
+}
+
+td form button[name="action"][value="reject"] {
+    background-color: #f44336;
+    color: white;
+}
+
+td form button[name="action"][value="reject"]:hover {
+    background-color: #da190b;
+}
+/* Styles for the pending orders section */
+.pending_orders {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+   
+  
+   
+}
+
+/* Layout for cards */
+.cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+/* Styles for each card */
+.card {
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    flex: 1 1 calc(33.333% - 40px);
+    max-width: calc(33.333% - 40px);
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Style for text inside cards */
+.card p {
+    margin: 10px 0;
+    font-size: 16px;
+    color: #333;
+}
+
+.card p#status {
+    font-weight: bold;
+    color: #007bff;
+}
+
+.card p:last-child {
+    margin-bottom: 0;
+}
+
+.no-orders {
+    text-align: center;
+    font-size: 18px;
+    color: #888;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Responsive design for smaller screens */
+@media (max-width: 768px) {
+    .card {
+        flex: 1 1 calc(50% - 20px);
+        max-width: calc(50% - 20px);
+    }
+}
+
+@media (max-width: 480px) {
+    .card {
+        flex: 1 1 100%;
+        max-width: 100%;
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .home-content {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .home-content .text {
+        font-size: 20px;
+    }
+
+    th, td {
+        font-size: 14px;
+        padding: 8px;
+    }
+
+    td form button {
+        font-size: 12px;
+    }
+}

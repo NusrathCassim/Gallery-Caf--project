@@ -1,4 +1,6 @@
-
+.next{
+    flex-direction: column;
+}
 
 /* Form styles */
 .search-form {

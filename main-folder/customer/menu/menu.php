@@ -86,7 +86,7 @@ if (isset($_GET['cuisine'])) {
                     }
                     echo '<h3>' . htmlspecialchars($row['Item']) . '</h3>';
                     echo '<p>Cuisine: ' . htmlspecialchars($row['Cuisine']) . '</p>';
-                    echo '<p>Price: $' . htmlspecialchars($row['Price']) . '</p>';
+                    echo '<p>Price: Rs ' . htmlspecialchars($row['Price']) . '</p>';
                     echo '<p> ' . htmlspecialchars($row['Description']) . '</p>';
                     echo '</div>';
                 }

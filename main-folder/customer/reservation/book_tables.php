@@ -99,7 +99,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 </form>
             </div>
             <div class="message">
-                <marquee>Reservation Details will be sent to your email</marquee>
+                <div class="marq-box">
+                <marquee >Reservation Details will be sent to your email</marquee>
+                </div>
+               
             
              <div class="display_submit_data">
                 
@@ -123,7 +126,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                             case 'pending':
                                 $status_text = 'Reservation Pending';
                         }
-                        echo "<p>Status: " . $status_text . "</p>";
+                        echo "<p style='color: red;'>Status: " . $status_text . "</p>";
                         echo "</div>"; // close the card div
                     }
                     echo "</div>"; // close the cards div

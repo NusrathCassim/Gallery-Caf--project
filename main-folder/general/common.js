@@ -1,3 +1,4 @@
+// js query to make the arrow in the nav bar to work properly
 document.addEventListener("DOMContentLoaded", () => {
     let arrows = document.querySelectorAll(".arrow");
     arrows.forEach(arrow => {

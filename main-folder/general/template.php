@@ -12,7 +12,7 @@
     <div class="sidebar">
         <div class="logo-Details">
            
-            <i class='bx bx-cube'></i></a>
+            <a href="/main-folder/general/home.php"><i class='bx bx-cube'></i></a>
             <span class="logo_name"; font-family="DM Serif Display";>Gallery Café</span>
             
         </div>
@@ -43,7 +43,7 @@
                     
                 </li>
                 <li><a href="/main-folder/customer/special-events/special-events.php">
-                    <i class='bx bx-cog'></i>
+                <i class='bx bxs-party'></i>
                         <span class="link_name">
                          Special Events
                         </span>
@@ -51,7 +51,7 @@
                 <li>
                      <div class="icon-link">
                         <a href="/main-folder/customer/c-Review/c-review.php">
-                        <i class='bx bx-grid-alt'></i>
+                        <i class='bx bx-edit'></i>
                             <span class="link_name">
                              Reviews
                             </span>
@@ -64,8 +64,14 @@
                     </ul>
                     
                 </li>
+                <li><a href="/main-folder/customer/user_data/user_detail.php">
+                <i class='bx bxs-user-circle'></i>
+                        <span class="link_name">
+                            Profile
+                        </span>
+                </a></li>
                 <li><a href="/main-folder/SignUp/logout_user.php">
-                    <i class='bx bx-grid-alt'></i>
+                <i class='bx bx-log-out'></i>
                         <span class="link_name">
                             Logout
                         </span>

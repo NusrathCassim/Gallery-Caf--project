@@ -2,7 +2,7 @@
 session_start();
 include('../../connection/connection.php'); // Adjust the path as necessary
 
-$user_id = $_SESSION['user_id'];
+
 
 // Fetch menu items from the database
 $menu_query = "SELECT * FROM `menu`";
@@ -15,37 +15,54 @@ if (isset($_GET['food']) && !empty($_GET['food'])) {
     $selected_food = $_GET['food'];
 
     // Fetch reviews for the selected menu item
-    $stmt = $conn->prepare("SELECT user_id, menu_item, review, created_at FROM review WHERE menu_item = ?");
+    $stmt = $conn->prepare("SELECT id,user_id, menu_item, review, created_at FROM review WHERE menu_item = ?");
     $stmt->bind_param("s", $selected_food);
     $stmt->execute();
     $result = $stmt->get_result();
     $reviews = $result->fetch_all(MYSQLI_ASSOC);
     $stmt->close();
 }
+// Handle review deletion
+if (isset($_POST['delete'])) {
+    $review_id = $_POST['review_id'];
+
+
+    $stmt = $conn->prepare("DELETE FROM review WHERE id = ?");
+    $stmt->bind_param("i", $review_id);
+    
+    if ($stmt->execute()) {
+        $_SESSION['alert'] = "Review deleted successfully!";
+        header("Location: manage-cr.php");
+        exit();
+    } else {
+        $error = "Error deleting review. Please try again.";
+    }
+    
+    $stmt->close();
+}
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../../general/template.css">
+    <link rel="stylesheet" href="/main-folder/admin/template-admin.css">
     <link rel="stylesheet" href="../../general/home.css">
-    <link rel="stylesheet" href="watch.css"> 
-    <!-- Include the JavaScript file -->
+    <link rel="stylesheet" href="/main-folder/admin/add-menu/add-menu.css">
+    <link rel="stylesheet" href="manage-cr.css">
     <script src="../../general/common.js" defer></script>
-    <title>Review</title>
+    <title>Admin</title>
 </head>
 <body>
-    <?php include('../../general/template.php'); ?>
-    
+    <?php include('../template_admin.php'); ?>
     <section class="home-section">
         <div class="home-content">
             <i class="bx bx-menu"></i>
-            <span class="text">Review</span>
+            <span class="text">Manage Review</span>
         </div>
-       
         <div class="next">
-            <div class="search-form">
+        <div class="search-form">
                 <form action="" method="GET">
                     <select name="food" id="food">
                         <option value="">Select Menu Item</option>
@@ -60,13 +77,11 @@ if (isset($_GET['food']) && !empty($_GET['food'])) {
                     <input type="submit" value="Filter">
                 </form>
             </div>
-
             <!-- Display reviews for the selected menu item -->
            
             <div class="reviews">
             
             <div class="item-box">
-                <!--  converts special characters in the $selected_food variable to their corresponding HTML entities. -->
                  <h3>Reviews for <?= htmlspecialchars($selected_food) ?></h3>
             </div>
                 <?php if (!empty($reviews)): ?>
@@ -81,6 +96,10 @@ if (isset($_GET['food']) && !empty($_GET['food'])) {
                             <div class="review-footer">
                             <p><small><strong>Date:</strong> <?= htmlspecialchars($review['created_at']) ?></small></p>
                             <p><small><strong>User:</strong> <?= htmlspecialchars($review['user_id']) ?></small></p>
+                            <form action="manage-cr.php" method="post" onsubmit="return confirm('Are you sure you want to delete this review?');">
+                                <input type="hidden" name="review_id" value="<?= $review['id'] ?>">
+                                <input type="submit" name="delete" value="Delete" class="btn-delete">
+                            </form>
                             </div>
                         </div>
                     <?php endforeach; ?>
@@ -89,7 +108,9 @@ if (isset($_GET['food']) && !empty($_GET['food'])) {
                 <?php endif; ?>
             </div>
         </div>
-    </section>
 
+        </div>
+
+    </section>
 </body>
 </html>
