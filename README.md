@@ -1,0 +1,2 @@
+## Gallery Cafe
+Hey there! Welcome to Gallery Cafe, your go-to spot for a smooth and enjoyable cafe experience. Whether you’re here to book a table, place an order, or check out some sweet promotions, we’ve made it super easy for you. For our awesome admins, we’ve got a handy dashboard to help manage reservations, keep track of orders, and share the latest deals with customers. It’s all about making your time at the cafe as pleasant and stress-free as possible. Jump in and see what Gallery Cafe has in store for you!✌️
