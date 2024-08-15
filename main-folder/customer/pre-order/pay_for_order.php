@@ -17,23 +17,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['pay_for_order'])) {
     // Convert total amount to cents as Stripe expects amounts to be in the smallest currency unit
     $total_amount_cents = $total_amount * 100;
 
-    try {
-        // Create a PaymentIntent with the amount and currency
-        $paymentIntent = \Stripe\PaymentIntent::create([
-            'amount' => $total_amount_cents,
-            'currency' => 'usd',
-            'metadata' => ['order_id' => $order_id],
-        ]);
-
-        // Pass the client secret to the frontend
-        $clientSecret = $paymentIntent->client_secret;
-
-        // Store the PaymentIntent ID in the session for confirmation step
-        $_SESSION['payment_intent_id'] = $paymentIntent->id;
-
-    } catch (\Stripe\Exception\ApiErrorException $e) {
-        $error = $e->getMessage();
-    }
+   //use stripe
 }
 ?>
 
