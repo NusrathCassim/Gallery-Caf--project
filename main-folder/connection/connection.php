@@ -1,8 +1,11 @@
 <?php
-$server = 'localhost:3307';
-$username = 'root';
-$password = '';
-$database = 'gallery_cafe';
+// $server = "";
+// $username = '';
+// $password = '';
+// $database = '';
+
+// add your username, password, server here
+
 
 // Check if any POST data is set (this condition might not be necessary for a welcome page)
 if (isset($_POST)) {

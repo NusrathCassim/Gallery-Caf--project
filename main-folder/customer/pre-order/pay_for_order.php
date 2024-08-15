@@ -2,7 +2,7 @@
 session_start();
 require '../../stripe/vendor/autoload.php'; // Ensure this path is correct
 
-\Stripe\Stripe::setApiKey('sk_test_51PfkINRuK1hMKp4HQq3lsWI69cv3hA2i3Ewjc6Y4AsHFFGz7u22NPgWdwXlmAFSMux3JjJpk28NUFVEJxteRqAM500uUXyvbqF'); // Replace with your Stripe secret key
+// \Stripe\Stripe::setApiKey('your_api_key');
 
 include('../../connection/connection.php');
 
