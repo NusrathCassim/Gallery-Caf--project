@@ -55,33 +55,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         // Send the email
         $mail = new PHPMailer(true);
         try {
-            //Server settings
-            $mail->isSMTP();
-            $mail->Host       = 'smtp.gmail.com'; // Set the SMTP server to send through
-            $mail->SMTPAuth   = true;
-            $mail->Username   = 'example@gmail.com'; // SMTP username
-            $mail->Password   = 'yourpass'; // SMTP password
-            $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
-            $mail->Port       = "port number";
-
-            //Recipients
-            $mail->setFrom('example@gmail.com', 'A name');
-            $mail->addAddress($user_email, $user_name);
-
-            // Content
-            $mail->isHTML(true);
-            $mail->Subject = 'Reservation ' . ucfirst($status);
-            $mailContent = "<p>Dear $user_name,</p>";
-            $mailContent .= "<p>Your reservation has been <strong>$status</strong>.</p>";
-            if ($status == 'confirmed') {
-                $mailContent .= "<p>Your table number is <strong>$table_number</strong>.</p>";
-            }
-            $mailContent .= "<p>Thank you for choosing our restaurant.</p>";
-            $mailContent .= "<p>Best Regards,<br>Gallery cafe</p>";
-
-            $mail->Body = $mailContent;
-
-            $mail->send();
+            // Server settings
+            // add the codes to set up the php mailer
         } catch (Exception $e) {
             echo "Message could not be sent. Mailer Error: {$mail->ErrorInfo}";
         }
